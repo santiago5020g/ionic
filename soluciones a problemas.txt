@@ -1,0 +1,32 @@
+si sale error de dependecias al momento de instalar algun plugin o tratar de sacar el apk
+el error es de tipo
+
+ What went wrong:
+A problem occurred configuring root project 'android'.
+> Could not resolve all dependencies for configuration ':_debugApkCopy'.
+   > Could not find com.android.support:support-v4:27.0.1.
+     Searched in the following locations:
+         file:/Users/cglt_0029/Library/Android/sdk/extras/android/m2repository/com/android/support/support-v4/27.0.1/support-v4-27.0.1.pom
+         file:/Users/cglt_0029/Library/Android/sdk/extras/android/m2repository/com/android/support/support-v4/27.0.1/support-v4-27.0.1.jar
+         file:/Users/cglt_0029/Desktop/hybrid-mobile-loyalty/pla...
+
+
+solucion
+
+npm install -g ionic@latest
+npm install -g cordova@latest
+npm install -g cordova-android@latest
+ionic cordova platform rm android
+ionic cordova platform add android
+cordova plugin rm cordova-plugin-compat --force
+cordova plugin add cordova-plugin-compat@latest
+
+If you get permission error, use sudo.
+
+I removed platform and added again, then it worked. Try it.
+
+
+de https://forum.ionicframework.com/t/run-android-platform-error-with-cordova-plugin-facebook4/114510/5
+
+
+por husmen73

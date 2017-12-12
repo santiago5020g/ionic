@@ -1,0 +1,15 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>Home</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <div *ngFor="let item of data">
+    <ion-card>
+      <img src="{{ item.img }}"/>
+      <div class="card-title">São Paulo</div>
+      <div class="card-subtitle">41 Listings</div>
+    </ion-card>
+  </div>
+</ion-content>
